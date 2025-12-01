@@ -1,100 +1,199 @@
+
+
 :root {
-  --oui-font-family: 'Manrope', sans-serif;
+  /* Font Settings */
+  --oui-font-family: 'Inter Variable', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
+  --oui-font-family-mono: 'Berkeley Mono', ui-monospace, 'SF Mono', 'Menlo', monospace;
+  --oui-font-family-serif: 'Tiempos Headline', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
   --oui-font-size-base: 16px;
-
-  /* colors */
-  --oui-color-primary: 176 132 233;
-  --oui-color-primary-light: 213 190 244;
-  --oui-color-primary-darken: 137 76 209;
+  
+  /* Font Weights */
+  --oui-font-weight-light: 300;
+  --oui-font-weight-normal: 400;
+  --oui-font-weight-medium: 510;
+  --oui-font-weight-semibold: 590;
+  --oui-font-weight-bold: 680;
+  
+  /* Colors - Primary (Linear Indigo/Purple) */
+  --oui-color-primary: 94 106 210;           /* #5e6ad2 - Linear brand indigo */
+  --oui-color-primary-light: 130 143 255;    /* #828fff - Lighter accent */
+  --oui-color-primary-darken: 113 112 255;   /* #7170ff - Accent color */
   --oui-color-primary-contrast: 255 255 255;
-
-  --oui-color-link: 189 107 237;
-  --oui-color-link-light: 217 152 250;
-
-  --oui-color-secondary: 255 255 255;
-  --oui-color-tertiary: 218 218 218;
-  --oui-color-quaternary: 218 218 218;
-
-  --oui-color-danger: 245 97 139;
-  --oui-color-danger-light: 250 167 188;
-  --oui-color-danger-darken: 237 72 122;
+  
+  /* Colors - Link */
+  --oui-color-link: 130 143 255;             /* #828fff */
+  --oui-color-link-light: 160 170 255;
+  
+  /* Colors - Text/Foreground */
+  --oui-color-secondary: 247 248 248;        /* #f7f8f8 - Primary text */
+  --oui-color-tertiary: 208 214 224;         /* #d0d6e0 - Secondary text */
+  --oui-color-quaternary: 138 143 152;       /* #8a8f98 - Tertiary text */
+  
+  /* Colors - Danger/Error (Linear Red) */
+  --oui-color-danger: 235 87 87;             /* #eb5757 */
+  --oui-color-danger-light: 255 120 120;
+  --oui-color-danger-darken: 200 60 60;
   --oui-color-danger-contrast: 255 255 255;
-
-  --oui-color-success: 41 233 169;
-  --oui-color-success-light: 101 240 194;
-  --oui-color-success-darken: 0 161 120;
+  
+  /* Colors - Success (Linear Green) */
+  --oui-color-success: 76 183 130;           /* #4cb782 */
+  --oui-color-success-light: 104 204 88;     /* #68cc58 */
+  --oui-color-success-darken: 50 150 100;
   --oui-color-success-contrast: 255 255 255;
-
-  --oui-color-warning: 255 209 70;
-  --oui-color-warning-light: 255 229 133;
-  --oui-color-warning-darken: 255 152 0;
-  --oui-color-warning-contrast: 255 255 255;
-
-  --oui-color-fill: 36 32 47;
-  --oui-color-fill-active: 40 46 58;
-
-  --oui-color-base-1: 93 83 123;
-  --oui-color-base-2: 81 72 107;
-  --oui-color-base-3: 68 61 69;
-  --oui-color-base-4: 57 52 74;
-  --oui-color-base-5: 51 46 66;
-  --oui-color-base-6: 43 38 56;
-  --oui-color-base-7: 36 32 47;
-  --oui-color-base-8: 29 26 38;
-  --oui-color-base-9: 22 20 28;
-  --oui-color-base-10: 14 13 18;
-
-  --oui-color-base-foreground: 255 255 255;
-  --oui-color-line: 255 255 255;
-
-  --oui-color-trading-loss: 245 97 139;
+  
+  /* Colors - Warning (Linear Yellow/Orange) */
+  --oui-color-warning: 242 201 76;           /* #f2c94c */
+  --oui-color-warning-light: 255 220 100;
+  --oui-color-warning-darken: 252 120 64;    /* #fc7840 - Orange */
+  --oui-color-warning-contrast: 0 0 0;
+  
+  /* Colors - Background/Fill */
+  --oui-color-fill: 8 9 10;                  /* #08090a - Primary bg */
+  --oui-color-fill-active: 15 16 17;         /* #0f1011 - Level 1 */
+  
+  /* Colors - Base Scale (Dark to Light) */
+  --oui-color-base-1: 138 143 152;           /* #8a8f98 - Tertiary text */
+  --oui-color-base-2: 98 102 109;            /* #62666d - Quaternary text */
+  --oui-color-base-3: 62 62 68;              /* #3e3e44 - Border tertiary */
+  --oui-color-base-4: 52 52 58;              /* #34343a - Border secondary */
+  --oui-color-base-5: 40 40 44;              /* #28282c - Bg quaternary */
+  --oui-color-base-6: 35 37 42;              /* #23252a - Border primary */
+  --oui-color-base-7: 28 28 31;              /* #1c1c1f - Bg secondary */
+  --oui-color-base-8: 20 21 22;              /* #141516 - Level 2 */
+  --oui-color-base-9: 15 16 17;              /* #0f1011 - Level 1 */
+  --oui-color-base-10: 8 9 10;               /* #08090a - Level 0 */
+  --oui-color-base-foreground: 247 248 248;  /* #f7f8f8 */
+  
+  /* Colors - Line/Border */
+  --oui-color-line: 55 57 58;                /* #37393a */
+  
+  /* Colors - Trading (using Linear colors) */
+  --oui-color-trading-loss: 235 87 87;       /* #eb5757 - Red */
   --oui-color-trading-loss-contrast: 255 255 255;
-  --oui-color-trading-profit: 41 233 169;
+  --oui-color-trading-profit: 76 183 130;    /* #4cb782 - Green */
   --oui-color-trading-profit-contrast: 255 255 255;
-
-  /* gradients */
-  --oui-gradient-primary-start: 40 0 97;
-  --oui-gradient-primary-end: 189 107 237;
-
-  --oui-gradient-secondary-start: 81 42 121;
-  --oui-gradient-secondary-end: 176 132 233;
-
-  --oui-gradient-success-start: 1 83 68;
-  --oui-gradient-success-end: 41 223 169;
-
-  --oui-gradient-danger-start: 153 24 76;
-  --oui-gradient-danger-end: 245 97 139;
-
-  --oui-gradient-brand-start: 231 219 249;
-  --oui-gradient-brand-end: 159 107 225;
-  --oui-gradient-brand-stop-start: 6.62%;
-  --oui-gradient-brand-stop-end: 86.5%;
-  --oui-gradient-brand-angle: 17.44deg;
-
-  --oui-gradient-warning-start: 152 58 8;
-  --oui-gradient-warning-end: 255 209 70;
-
-  --oui-gradient-neutral-start: 27 29 24;
-  --oui-gradient-neutral-end: 38 41 46;
-
-  /* rounded */
-  --oui-rounded-sm: 2px;
-  --oui-rounded: 4px;
-  --oui-rounded-md: 6px;
-  --oui-rounded-lg: 8px;
-  --oui-rounded-xl: 12px;
-  --oui-rounded-2xl: 16px;
-  --oui-rounded-full: 9999px;
-
-  /* spacing */
+  
+  /* Additional Linear Colors */
+  --oui-color-blue: 78 167 252;              /* #4ea7fc */
+  --oui-color-orange: 252 120 64;            /* #fc7840 */
+  --oui-color-yellow: 242 201 76;            /* #f2c94c */
+  --oui-color-indigo: 94 106 210;            /* #5e6ad2 */
+  --oui-color-linear-plan: 104 204 88;       /* #68cc58 */
+  --oui-color-linear-build: 212 177 68;      /* #d4b144 */
+  --oui-color-linear-security: 122 127 173;  /* #7a7fad */
+  
+  /* Gradients */
+  --oui-gradient-primary-start: 94 106 210;  /* Indigo */
+  --oui-gradient-primary-end: 130 143 255;   /* Light indigo */
+  --oui-gradient-secondary-start: 8 9 10;    /* Dark bg */
+  --oui-gradient-secondary-end: 28 28 31;    /* Secondary bg */
+  --oui-gradient-success-start: 50 120 80;
+  --oui-gradient-success-end: 76 183 130;    /* Green */
+  --oui-gradient-danger-start: 150 40 40;
+  --oui-gradient-danger-end: 235 87 87;      /* Red */
+  --oui-gradient-brand-start: 94 106 210;    /* Linear brand */
+  --oui-gradient-brand-end: 130 143 255;
+  --oui-gradient-brand-stop-start: 0%;
+  --oui-gradient-brand-stop-end: 100%;
+  --oui-gradient-brand-angle: 135deg;
+  --oui-gradient-warning-start: 200 100 30;
+  --oui-gradient-warning-end: 242 201 76;    /* Yellow */
+  --oui-gradient-neutral-start: 8 9 10;
+  --oui-gradient-neutral-end: 28 28 31;
+  
+  /* Rounded/Border Radius */
+  --oui-rounded-sm: 4px;                     /* --radius-4 */
+  --oui-rounded: 6px;                        /* --radius-6 */
+  --oui-rounded-md: 8px;                     /* --radius-8 */
+  --oui-rounded-lg: 12px;                    /* --radius-12 */
+  --oui-rounded-xl: 16px;                    /* --radius-16 */
+  --oui-rounded-2xl: 24px;                   /* --radius-24 */
+  --oui-rounded-3xl: 32px;                   /* --radius-32 */
+  --oui-rounded-full: 9999px;                /* --radius-rounded */
+  
+  /* Spacing */
   --oui-spacing-xs: 20rem;
   --oui-spacing-sm: 22.5rem;
   --oui-spacing-md: 26.25rem;
   --oui-spacing-lg: 30rem;
   --oui-spacing-xl: 33.75rem;
+  
+  /* Layout */
+  --oui-page-padding-inline: 24px;
+  --oui-page-padding-block: 64px;
+  --oui-page-max-width: 1024px;
+  --oui-prose-max-width: 624px;
+  --oui-header-height: 64px;
+  --oui-header-blur: 20px;
+  
+  /* Z-Index Layers */
+  --oui-layer-max: 10000;
+  --oui-layer-dialog: 700;
+  --oui-layer-popover: 600;
+  --oui-layer-overlay: 500;
+  --oui-layer-header: 100;
+  
+  /* Shadows (Linear uses minimal shadows in dark mode) */
+  --oui-shadow-none: 0px 0px 0px transparent;
+  --oui-shadow-tiny: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --oui-shadow-low: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --oui-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --oui-shadow-high: 0 8px 16px rgba(0, 0, 0, 0.5);
+  
+  /* Transitions */
+  --oui-speed-quick: 0.1s;
+  --oui-speed-regular: 0.25s;
+  --oui-ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --oui-ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  
+  /* Scrollbar */
+  --oui-scrollbar-color: rgba(255, 255, 255, 0.1);
+  --oui-scrollbar-color-hover: rgba(255, 255, 255, 0.2);
+  --oui-scrollbar-color-active: rgba(255, 255, 255, 0.4);
+  --oui-scrollbar-size: 6px;
+  
+  /* Focus Ring */
+  --oui-focus-ring-color: 94 106 210;        /* Indigo */
+  --oui-focus-ring-width: 2px;
+  --oui-focus-ring-offset: 2px;
 }
 
+/* Apply to html and body */
 html, body {
-  font-family: 'Manrope', sans-serif !important;
-  font-size: 16px !important;
+  font-family: var(--oui-font-family) !important;
+  font-size: var(--oui-font-size-base) !important;
+  background-color: rgb(var(--oui-color-fill));
+  color: rgb(var(--oui-color-secondary));
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar Styling (WebKit) */
+::-webkit-scrollbar {
+  width: var(--oui-scrollbar-size);
+  height: var(--oui-scrollbar-size);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--oui-scrollbar-color);
+  border-radius: var(--oui-rounded-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--oui-scrollbar-color-hover);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--oui-scrollbar-color-active);
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(94, 106, 210, 0.3);
+  color: rgb(var(--oui-color-secondary));
 }
